@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  height: 100vh;
+  box-sizing: border-box;
+  --foreground-rgb: 0, 0, 0;
+}
+.page{
+  height: 100vh;
+}
