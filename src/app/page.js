@@ -1,6 +1,6 @@
 import InvoiceTile from '@/components/InvoiceTile'
 import './globals.css'
-export default function Home({darkMode, allInvoices}) {
+export default function Home({darkMode, allInvoices, changeInvoice}) {
   return (
     <main className="w-full pr-12 pl-28 py-16">
       <div className='main_container'>
@@ -21,7 +21,7 @@ export default function Home({darkMode, allInvoices}) {
           </div>
         </header>
         <div className="invoice_wrapper">
-          {allInvoices && allInvoices.map((invoice)=>(<InvoiceTile invoice={invoice} darkMode={darkMode}/>))}
+          {allInvoices && allInvoices.map((invoice)=>(<InvoiceTile key={invoice.id} setInvoice={changeInvoice} invoice={invoice} darkMode={darkMode}/>))}
         </div>
       </div>
     </main>

@@ -1,19 +1,14 @@
 import React from 'react'
 import styles from './styles/InvoiceTile.module.css'
-import { useDispatch, useSelector, Provider } from 'react-redux'
-import store from '../app/store'
-import Link from 'next/link'
 
-export default function InvoiceTile({invoice, darkMode}) {
+export default function InvoiceTile({invoice, darkMode, setInvoice}) {
     const capLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1)
-    const dispatch = useDispatch()
-    const setInvoice = () =>{
-        dispatch(changeInvoice(invoice))
+    const changeInvoice = () =>{
+        setInvoice(invoice)
     }
-    
+
   return (
-    <Provider store={store}>
-    <div onClick={setInvoice} className={styles.wrapper} style={darkMode? {background: '#1e2139', color:'#fff'}:{background:"#fff", color: '#333'}}>
+    <div onClick={changeInvoice} className={styles.wrapper} style={darkMode? {background: '#1e2139', color:'#fff'}:{background:"#fff", color: '#333'}}>
         <div className='flex justify-between items-center'>
             <p className='w-20'><span className='text-sidebar-inner'>#</span>{invoice.id.slice(1)}</p>
             <p className='w-36'>{invoice.paymentDue}</p>
@@ -26,7 +21,5 @@ export default function InvoiceTile({invoice, darkMode}) {
             <img src="/images/icon-arrow-right.svg" alt="" className='cursor-pointer' />
         </div>      
     </div>
-    </Link>
-    </Provider>
   )
 }
