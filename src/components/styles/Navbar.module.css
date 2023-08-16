@@ -4,8 +4,9 @@
     justify-content: space-between;
     flex-direction: column;
     border-radius: 0 20px 20px 0;
-    background: rgb(55, 59, 83);
-    width: 103px;
+    width: 108px;
+    position: fixed;
+    top: 0;
 }
 .sidebarTop{
     height: 103px;

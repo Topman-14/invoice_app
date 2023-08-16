@@ -1,0 +1,25 @@
+.status{
+    width: 104px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9em;
+    padding: 7px 0 6px 0;
+    border-radius: 6px;
+    margin: 0 25px;
+    cursor: pointer;
+}
+.wrapper{
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin: 0 0 8px 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.066);
+    border: 1px solid rgba(0, 0, 255, 0);
+    transition: 0.3s;
+}
+.wrapper:hover{
+    border: 1px solid rgb(124, 93, 250);
+}
