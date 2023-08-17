@@ -1,7 +1,7 @@
 # Frontend Mentor Invoice App 😎
 
-This is a[Next.js](https://nextjs.org/) project for the Invoice App frontendmentor.io challenge
-<br >
+This is a [Next.js](https://nextjs.org/) project for the frontendmentor.io Invoice App challenge
+# ScreenShots 📸
 ![image](https://github.com/Topman-14/invoice_app/assets/98329531/07698c64-e7a2-4315-925f-78d6079c9afc)
 
 ![image](https://github.com/Topman-14/invoice_app/assets/98329531/4276fab1-a926-4c98-bdd0-96aa73776e04)
