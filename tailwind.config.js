@@ -11,6 +11,7 @@ module.exports = {
         'sidebar-blue': 'rgb(55, 59, 83)',
         'sidebar-top': 'rgb(124, 93, 250)',
         'sidebar-inner': '#9277ff',
+        'edit-btn': 'rgb(226, 232, 240, 0.5)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
