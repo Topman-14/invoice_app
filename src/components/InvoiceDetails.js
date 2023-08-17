@@ -2,24 +2,27 @@ import React from 'react'
 import styles from './styles/InvoiceDetails.module.css'
 
 export default function InvoiceDetails({invoice, handlePrev, darkMode}) {
-  console.log(invoice)
   const capLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1)
   return (
       <div className="main_container" style={darkMode? {color:'#fff'}:{color: '#333'}}>
         <div className='my-16 mr-3 ml-28 pb-10'>
-          <div className='flex items-center gap-2 mb-7'>
+          <div onClick={handlePrev} className='flex items-center gap-2 mb-7 cursor-pointer'>
             <img className="h-3" src="./images/icon-arrow-left.svg" alt="" />
             <p>Go back</p> 
           </div>
           
-          <header className='rounded-xl p-6' style={darkMode? {background: '#1e2139', color:'#fff'}:{background:"#fff", color: '#333'}}>
+          <header className='rounded-xl p-6 flex justify-between' style={darkMode? {background: '#1e2139', color:'#fff'}:{background:"#fff", color: '#333'}}>
             <div className='flex gap-6 items-center'>
               <p className='font-thin'>Status</p>
               <p className='font-bold px-10 py-2 rounded-lg' style={invoice.status == 'paid'? {background:'#33d69f31', color: '#33d69f'} : invoice.status == 'pending' ? {background:'#ff8f002f', color: '#ff8f00'} : {background:'#dfe3f84f', color: 'inherit'}} >{capLetter(invoice.status)}</p>
             </div>
+            <div className='flex gap-3'>
+              <button className='font-bold p-2 rounded-full w-20 bg-edit-btn transition-colors'>Edit</button>
+              <button className='font-bold p-2 rounded-full w-20 bg-red-400 text-white'>Delete</button>
+            </div>
           </header>
 
-          <div className='rounded-xl p-8 mt-7' style={darkMode? {background: '#1e2139', color:'#fff'}:{background:"#fff", color: '#333'}}>
+          <div className='rounded-xl p-8 mt-7 transition-colors' style={darkMode? {background: '#1e2139', color:'#fff'}:{background:"#fff", color: '#333'}}>
             <div className="flex justify-between">
               <div>
                 <p><span className='text-sidebar-inner'>#</span>{invoice.id.slice(1)}</p>
