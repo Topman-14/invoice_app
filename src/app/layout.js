@@ -44,7 +44,7 @@ export default function RootLayout() {
         <body className="flex justify-between page" style={isDarkTheme? {background: 'rgb(20, 22, 37)'} : {background: '#f1f1f1'}}>
           <Navbar toggleDarkMode={()=>{setIsDarkTheme((prevTheme)=> !prevTheme)}} darkMode={isDarkTheme}/>
           {!isInvoiceOpen && <Home darkMode={isDarkTheme} allInvoices={invoices} changeInvoice={viewCurrentInvoice}/>}
-          {isInvoiceOpen && <InvoiceDetails invoice={currentInvoice} handlePrev={closeInvoice}/>}
+          {isInvoiceOpen && <InvoiceDetails darkMode={isDarkTheme} invoice={currentInvoice} handlePrev={closeInvoice}/>}
         </body>
       </html>
   )
